@@ -4,7 +4,7 @@ import pygame
 from snake import * 
 from apple import NewApple
 
-FIELD_SIZE = (20,20)
+FIELD_SIZE = (5,5)
 START_POS = (2,2)
 WIDTH = 300
 HEIGHT = 300
@@ -107,7 +107,7 @@ def main(disp, snake, apple):
 				print("Game Over, Won!")
 				return 0
 
-		valid_moves = validMoves(FIELD_SIZE, snake, snake[-1])
+		valid_moves = validMoves(FIELD_SIZE, [], snake, snake[-1])
 		if not valid_moves:
 			print("Game Over, Lost!")
 			return 0
